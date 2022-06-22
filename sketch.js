@@ -12,8 +12,6 @@ let direction = 1
 
 let W = window.innerWidth
 let H = window.innerHeight
-
-let song;
 function setup() {
 
 
@@ -21,8 +19,6 @@ function setup() {
 
   delay = new p5.Delay();
   reverb = new p5.Reverb();
-
-  song = loadSound('pet.mp3');
 
   reverb.process(poly, 2, 2); //to only add reverb, toggle the others off.
   // delay.process(poly, 0.50, 0.5, 2300);
@@ -55,7 +51,6 @@ for (let y = 0; y < H - (gridSpacing * 2); y += gridSpacing) {
       p.mousePressed(changeEmoji)
       p.mouseOver(changeEmoji)
       userStartAudio();
-      song.play();
     }
   }
 }
